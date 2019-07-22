@@ -13,7 +13,7 @@ export class NavbarComponent implements OnInit {
   constructor(private authService:AuthService,
     private afsAuth:AngularFireAuth) { }
 
-  public app_name:string='Backlogs';
+  public app_name:string='Backlog eieme';
   public isLogged:boolean=false;
   
   ngOnInit() {
@@ -23,10 +23,8 @@ export class NavbarComponent implements OnInit {
   getCurrentUser(){
     this.authService.isAuth().subscribe(auth=>{
       if(auth){
-        console.log('usuario Logueado');
         this.isLogged=true;
       }else{
-        console.log('usuario no Logueado');
         this.isLogged=false;
       }
     });

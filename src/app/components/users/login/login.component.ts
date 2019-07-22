@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   onLogin():void{
     this.authServivce.loginEmailUser(this.email,this.password)
     .then((res)=>{
-      console.log('Loged',res);
+      console.log('Bienvenido',res);
       this.onLoginRedirect();
     }).catch(err=>console.log('Error',err.message));
   }
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
   onLoginGoogle():void{
     this.authServivce.loginGoogleUser()
     .then((res)=>{
-      console.log('Loged',res);
+      console.log('Bienvenido',res);
       this.onLoginRedirect();
     }).catch(err=>console.log('Error',err.message));
   }
@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
   onLoginFacebook():void{
     this.authServivce.loginFacebookUser()
     .then((res)=>{
-      console.log('Loged',res);
+      console.log('Bienvenido',res);
       this.onLoginRedirect();
     }).catch(err=>console.log('Error',err.message));
   }
@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
   }
 
   onLoginRedirect():void{
-    this.router.navigate(['admin/list-books']);
+    this.router.navigate(['home']);
   }
 
 }

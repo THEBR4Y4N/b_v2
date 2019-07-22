@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../../services/auth.service';
 import {Router} from '@angular/router';
 import{AngularFireAuth} from '@angular/fire/auth';
+import { NavbarComponent } from '../../navbar/navbar.component';
 
 
 @Component({
@@ -22,23 +23,24 @@ export class RegisterComponent implements OnInit {
   onAddUser(){
     this.authService.registerUser(this.email,this.password)
     .then((res)=>{
-      this.router.navigate(['']);
+      console.log('Usuario Creado Correctamente',res);
+      this.onUserCreateRedirect();
     }).catch(err=>console.log('err',err.message));
   }
 
   onLoginGoogle():void{
     this.authService.loginGoogleUser()
     .then((res)=>{
-      console.log('Loged',res);
-      this.onLoginRedirect();
+      console.log('Usuario Creado Correctamente',res);
+      this.onUserCreateRedirect();
     }).catch(err=>console.log('Error',err.message));
   }
 
   onLoginFacebook():void{
     this.authService.loginFacebookUser()
     .then((res)=>{
-      console.log('Loged',res);
-      this.onLoginRedirect();
+      console.log('Usuario Creado Correctamente',res);
+      this.onUserCreateRedirect();
     }).catch(err=>console.log('Error',err.message));
   }
   
@@ -46,7 +48,7 @@ export class RegisterComponent implements OnInit {
     this.afAuth.auth.signOut();
   }
 
-  onLoginRedirect():void{
-    this.router.navigate(['admin/list-books']);
+  onUserCreateRedirect():void{
+    this.router.navigate(['home']);
   }
 }

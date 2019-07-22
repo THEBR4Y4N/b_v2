@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebaseConfig:{
-    apiKey: "AIzaSyD5lZcRfjIsErkZRDoo12vNnWs6Ap_20y4",
-    authDomain: "backlogv2.firebaseapp.com",
-    databaseURL: "https://backlogv2.firebaseio.com",
-    projectId: "backlogv2",
-    storageBucket: "backlogv2.appspot.com",
-    messagingSenderId: "695376986599",
-    appId: "1:695376986599:web:18806295f91b8924"
+    apiKey: "AIzaSyA01oExfC32qePOEyuDgAR4bHQGeox9vr4",
+    authDomain: "backlogv3.firebaseapp.com",
+    databaseURL: "https://backlogv3.firebaseio.com",
+    projectId: "backlogv3",
+    storageBucket: "backlogv3.appspot.com",
+    messagingSenderId: "315602952292",
+    appId: "1:315602952292:web:59f530efdd630e9d"
   }
 };
 
